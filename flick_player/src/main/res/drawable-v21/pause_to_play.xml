@@ -1,0 +1,56 @@
+<!--
+Copyright (C) 2021 Flipkart Internet Pvt Ltd
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="100dp"
+            android:height="100dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <group
+                android:name="play"
+                android:pivotX="12"
+                android:pivotY="12">
+                <path
+                    android:name="path"
+                    android:fillColor="#ffffff"
+                    android:pathData="M 7 6.82 L 7 17.18 C 7 17.97 7.87 18.45 8.54 18.02 C 9.21 17.59 16.06 13.23 16.68 12.84 C 17.3 12.45 17.3 11.55 16.68 11.15 C 16.06 10.75 9.21 6.41 8.54 5.98 C 7.87 5.55 7 6.03 7 6.82 Z"
+                    android:strokeWidth="1" />
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="path">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="400"
+                android:interpolator="@android:interpolator/fast_out_slow_in"
+                android:propertyName="pathData"
+                android:valueFrom="M 7.714 13.667 C 6.771 13.667 6 14.417 6 15.333 C 6 16.25 6.771 17 7.714 17 C 10.571 17 13.429 17 16.286 17 C 17.229 17 18 16.25 18 15.333 C 18 14.417 17.229 13.667 16.286 13.667 L 16.286 13.667 L 7.714 13.667 M 7.714 7 C 6.771 7 6 7.75 6 8.667 L 6 8.667 C 6 9.583 6.771 10.333 7.714 10.333 L 16.286 10.333 C 17.229 10.333 18 9.583 18 8.667 C 18 7.75 17.229 7 16.286 7 C 13.429 7 10.571 7 7.714 7"
+                android:valueTo="M 7 12.049 C 7 13.76 7 15.47 7 17.18 C 7 17.97 7.87 18.45 8.54 18.02 C 9.027 17.708 12.773 15.323 15.025 13.891 C 15.874 13.351 16.51 12.947 16.68 12.84 C 16.971 12.657 17.125 12.362 17.143 12.06 L 17.143 12.06 L 7 12.049 M 8.54 5.98 C 7.87 5.55 7 6.03 7 6.82 L 7 6.82 C 7 8.563 7 10.306 7 12.049 L 17.143 12.06 C 17.164 11.716 17.009 11.363 16.68 11.15 C 16.507 11.038 15.845 10.618 14.968 10.061 C 12.711 8.627 9.023 6.29 8.54 5.98"
+                android:valueType="pathType" />
+        </aapt:attr>
+    </target>
+    <target android:name="play">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="400"
+                android:interpolator="@android:interpolator/fast_out_slow_in"
+                android:propertyName="rotation"
+                android:valueFrom="-90"
+                android:valueTo="0"
+                android:valueType="floatType" />
+        </aapt:attr>
+    </target>
+</animated-vector>

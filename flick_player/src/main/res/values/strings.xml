@@ -1,0 +1,25 @@
+<!--
+Copyright (C) 2021 Flipkart Internet Pvt Ltd
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<resources>
+    <string name="back_arrow">Back Arrow Icon</string>
+    <string name="rewind_desc">Rewind Image</string>
+    <string name="play_icon">Play Icon</string>
+    <string name="pause_icon">Pause Icon</string>
+    <string name="forward_icon">Forward Icon</string>
+    <string name="subtitle_audio">Subtitles &amp; Audio</string>
+    <string name="video_quality">Video Quality</string>
+    <string name="video_quality_title">Select Video Quality</string>
+    <string name="selected_icon">Selected Icon</string>
+    <string name="subtitle_text">Subtitles</string>
+    <string name="audio_title">Audio Languages</string>
+</resources>

@@ -1,0 +1,25 @@
+<!--
+Copyright (C) 2021 Flipkart Internet Pvt Ltd
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
+    android:width="19dp"
+    android:height="18dp"
+    android:viewportWidth="19"
+    android:viewportHeight="18">
+    <path
+        android:name="path"
+        android:fillColor="#ffffff"
+        android:fillType="evenOdd"
+        android:pathData="M 1.833 0 C 1.348 0.002 0.882 0.195 0.539 0.539 C 0.195 0.882 0.002 1.348 0 1.833 L 0 12.833 C 0 13.842 0.825 14.667 1.833 14.667 L 14.158 14.667 L 18.333 17.667 L 18.333 1.833 C 18.331 1.348 18.138 0.882 17.794 0.539 C 17.451 0.195 16.985 0.002 16.5 0 L 1.833 0 Z M 5.5 7.333 L 5.5 9.167 L 1.833 9.167 L 1.833 7.333 L 5.5 7.333 Z M 1.833 12.833 L 1.833 11 L 11 11 L 11 12.833 L 1.833 12.833 Z M 12.833 12.833 L 12.833 11 L 16.5 11 L 16.5 12.833 L 12.833 12.833 Z M 7.333 9.167 L 7.333 7.333 L 16.5 7.333 L 16.5 9.167 L 7.333 9.167 Z"
+        android:strokeWidth="1" />
+</vector>

@@ -1,0 +1,24 @@
+<!--
+Copyright (C) 2021 Flipkart Internet Pvt Ltd
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+     http://www.apache.org/licenses/LICENSE-2.0
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
+    android:width="17dp"
+    android:height="18dp"
+    android:viewportWidth="17"
+    android:viewportHeight="18">
+    <path
+        android:name="path"
+        android:fillColor="#ffffff"
+        android:pathData="M 14.61 9.344 C 14.642 9.078 14.663 8.802 14.663 8.514 C 14.664 8.236 14.642 7.959 14.599 7.684 L 16.399 6.279 C 16.476 6.214 16.528 6.125 16.548 6.027 C 16.567 5.928 16.552 5.826 16.505 5.737 L 14.802 2.788 C 14.695 2.597 14.472 2.533 14.28 2.597 L 12.162 3.448 C 11.722 3.109 11.239 2.829 10.725 2.618 L 10.406 0.362 C 10.391 0.26 10.339 0.168 10.261 0.101 C 10.183 0.035 10.083 -0.001 9.98 0 L 6.575 0 C 6.473 -0.001 6.375 0.035 6.299 0.102 C 6.222 0.169 6.173 0.261 6.16 0.362 L 5.84 2.618 C 5.319 2.831 4.84 3.118 4.404 3.448 L 2.286 2.597 C 2.191 2.56 2.085 2.559 1.989 2.594 C 1.893 2.629 1.813 2.698 1.764 2.788 L 0.061 5.737 C 0.009 5.825 -0.01 5.928 0.01 6.029 C 0.03 6.129 0.086 6.218 0.168 6.279 L 1.966 7.684 C 1.92 7.958 1.895 8.236 1.892 8.514 C 1.892 8.791 1.913 9.078 1.956 9.344 L 0.157 10.75 C 0.08 10.815 0.027 10.904 0.008 11.003 C -0.011 11.102 0.004 11.204 0.051 11.293 L 1.754 14.241 C 1.86 14.433 2.084 14.497 2.275 14.433 L 4.393 13.581 C 4.84 13.921 5.308 14.199 5.83 14.411 L 6.149 16.668 C 6.166 16.769 6.218 16.861 6.296 16.927 C 6.374 16.993 6.473 17.03 6.575 17.03 L 9.98 17.03 C 10.082 17.033 10.182 16.997 10.259 16.93 C 10.336 16.863 10.385 16.77 10.396 16.668 L 10.715 14.411 C 11.236 14.199 11.715 13.911 12.152 13.581 L 14.27 14.433 C 14.365 14.47 14.471 14.471 14.567 14.435 C 14.663 14.4 14.742 14.331 14.791 14.241 L 16.494 11.293 C 16.547 11.205 16.565 11.101 16.545 11.001 C 16.525 10.901 16.469 10.811 16.387 10.75 L 14.61 9.344 Z M 8.278 11.707 C 7.432 11.705 6.621 11.367 6.023 10.769 C 5.425 10.171 5.087 9.36 5.085 8.514 C 5.087 7.668 5.425 6.857 6.023 6.259 C 6.621 5.661 7.432 5.323 8.278 5.321 C 9.124 5.324 9.935 5.661 10.533 6.259 C 11.13 6.857 11.468 7.668 11.47 8.514 C 11.468 9.36 11.13 10.171 10.533 10.769 C 9.935 11.367 9.124 11.704 8.278 11.707 Z"
+        android:strokeWidth="1" />
+</vector>
