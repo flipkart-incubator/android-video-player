@@ -28,7 +28,8 @@ All the video playback related features are fully implemented here, and infrastr
 - Headphone support for controlling play/pause remotely
 
 # Upcoming features
-- Chromecast support in next version (within player only)
+There is no active development planned for this project
+
 
 # Where to look
 - `FlickStreamingFragment.kt` is to be instantiated by main app. This fragment renders the video and watermarks.
@@ -36,6 +37,11 @@ All the video playback related features are fully implemented here, and infrastr
 - `AdsControlsFragment.kt` for all Ads related controls
 - `FlickApplicationAdapter.kt` is the adapter to be implemented by main app's application class for image loading, network calls etc
 - `FlickAnalyticsAdapter.kt` is the adapter to be implemented by main app for tracking callbacks
+
+# Authors
+@anirudhramanan
+
+@thekirankumar
 
 # License
 
