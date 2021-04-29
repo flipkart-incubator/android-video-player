@@ -35,8 +35,8 @@ import com.flipkart.flick.ui.fragments.FlickFragmentFactory
 import com.flipkart.flick.ui.fragments.PlayerControlsFragment.Companion.FORWARD_REWIND_TIME
 import com.flipkart.flick.ui.helper.OnPlayerGestureListener
 import com.flipkart.flick.ui.helper.PlayerGestureHelper
-import com.google.android.exoplayer2.C
-import com.google.android.exoplayer2.ui.TimeBar
+import com.kaltura.android.exoplayer2.C
+import com.kaltura.android.exoplayer2.ui.TimeBar
 import com.kaltura.playkit.PlayerState
 import kotlinx.android.synthetic.main.player_control_view.view.*
 import kotlinx.android.synthetic.main.player_seekbar_layout.view.*
@@ -90,7 +90,7 @@ class PlayerControlView @JvmOverloads constructor(
     override fun onFinishInflate() {
         super.onFinishInflate()
         play_pause_button?.setOnClickListener(this)
-        exo_progress?.addListener(this)
+        kexo_progress?.addListener(this)
         subtitle_text_view?.setOnClickListener(this)
         video_quality_text_view?.setOnClickListener(this)
 
@@ -160,7 +160,7 @@ class PlayerControlView @JvmOverloads constructor(
     }
 
     fun toggleScrubberSeek(enable: Boolean) {
-        exo_progress.isEnabled = enable
+        kexo_progress.isEnabled = enable
     }
 
     fun hidePlayPause() {
@@ -260,7 +260,7 @@ class PlayerControlView @JvmOverloads constructor(
         val bufferedPosition = playerCallbackListener.bufferedPosition
 
         if (duration != C.TIME_UNSET) {
-            exo_duration?.text = stringForTime(duration)
+            kexo_duration?.text = stringForTime(duration)
         }
 
         if (!isBeingDragged && position != C.POSITION_UNSET.toLong() && duration != C.TIME_UNSET) {
@@ -290,12 +290,12 @@ class PlayerControlView @JvmOverloads constructor(
                     play_pause_button?.animate()?.alpha(1f)
                 }
             }
-            exo_position?.text = stringForTime(position)
-            exo_progress?.setPosition(Util.progressBarValue(position, duration).toLong())
-            exo_progress?.setDuration(Util.progressBarValue(duration, duration).toLong())
+            kexo_position?.text = stringForTime(position)
+            kexo_progress?.setPosition(Util.progressBarValue(position, duration).toLong())
+            kexo_progress?.setDuration(Util.progressBarValue(duration, duration).toLong())
         }
 
-        exo_progress?.setBufferedPosition(
+        kexo_progress?.setBufferedPosition(
             Util.progressBarValue(
                 bufferedPosition,
                 duration
@@ -311,7 +311,7 @@ class PlayerControlView @JvmOverloads constructor(
     }
 
     override fun onScrubMove(timeBar: TimeBar, position: Long) {
-        exo_position?.text =
+        kexo_position?.text =
             stringForTime((position * playerCallbackListener.duration) / PROGRESS_BAR_MAX)
     }
 
@@ -343,7 +343,7 @@ class PlayerControlView @JvmOverloads constructor(
                 }
                 playedAdGroups.add(false)
             }
-            exo_progress?.setAdGroupTimesMs(
+            kexo_progress?.setAdGroupTimesMs(
                 adPoints.toLongArray(),
                 playedAdGroups.toBooleanArray(),
                 adPoints.size

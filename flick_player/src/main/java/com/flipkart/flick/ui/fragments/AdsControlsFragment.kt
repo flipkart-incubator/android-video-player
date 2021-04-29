@@ -31,7 +31,7 @@ import com.flipkart.flick.helper.utils.ParentFinder
 import com.flipkart.flick.listeners.AutoHideable
 import com.flipkart.flick.ui.helper.isInPictureInPictureMode
 import com.flipkart.flick.ui.provider.PlayerDataProvider
-import com.google.android.exoplayer2.C
+import com.kaltura.android.exoplayer2.C
 import com.kaltura.playkit.Player
 import com.kaltura.playkit.ads.AdController
 import com.kaltura.playkit.plugins.ads.AdEvent

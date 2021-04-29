@@ -49,8 +49,14 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation 'com.google.android.material:material:1.3.0'
 
-    api 'com.kaltura.playkit:playkit:3.9.7'
-    api 'com.kaltura.playkit:imaplugin:3.9.7'
-    api 'com.kaltura.playkit:playkitproviders:3.9.7'
+//    api 'com.kaltura.playkit:playkit:3.9.7'
+//    api 'com.kaltura.playkit:imaplugin:3.9.7'
+//    api 'com.kaltura.playkit:playkitproviders:3.9.7'
+//    api 'com.kaltura.playkit:kavaplugin:3.9.7'
+    api 'com.kaltura.playkit:playkit:4.13.3'
+    api 'com.kaltura.playkit:imaplugin:4.13.3'
+    api 'com.kaltura.playkit:playkitproviders:4.13.3'
+    api 'com.kaltura.playkit:kavaplugin:4.13.3'
+
     api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
