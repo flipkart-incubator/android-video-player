@@ -63,6 +63,7 @@ import com.kaltura.playkit.player.PKAspectRatioResizeMode
 import com.kaltura.playkit.player.PKPlayerErrorType
 import com.kaltura.playkit.plugins.ads.AdEvent
 import com.kaltura.playkit.plugins.ima.IMAPlugin
+import com.kaltura.playkit.plugins.kava.KavaAnalyticsPlugin
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.flick_error_layout.*
 import kotlinx.android.synthetic.main.flick_streaming_fragment_layout.*
@@ -345,7 +346,13 @@ open class FlickStreamingFragment : androidx.fragment.app.Fragment(), OnTrackCha
         if (flickPlayerConfig?.adsEnabled == true) {
             adsVmap?.let {
                 /** this means that if ads API doesn't load, the player loads faster, because IMAPlugin is slow to load **/
-                registerPlugins(context, IMAPlugin.factory)
+                registerPlugins(context, IMAPlugin.factory, KavaAnalyticsPlugin.factory)
+
+                pluginConfigs.setPluginConfig(
+                    KavaAnalyticsPlugin.factory.name,
+                    pluginConfigFactory.createKavaAnalyticsPluginkConfig(contentConfig)
+                )
+
                 pluginConfigs.setPluginConfig(
                     IMAPlugin.factory.name,
                     pluginConfigFactory.createImaConfig(adsVmap)
@@ -353,7 +360,13 @@ open class FlickStreamingFragment : androidx.fragment.app.Fragment(), OnTrackCha
             }
         }
 
-        registerPlugins(context, BookmarkPlugin.factory)
+        registerPlugins(context, KavaAnalyticsPlugin.factory, BookmarkPlugin.factory)
+
+        pluginConfigs.setPluginConfig(
+            KavaAnalyticsPlugin.factory.name,
+            pluginConfigFactory.createKavaAnalyticsPluginkConfig(contentConfig)
+        )
+
         pluginConfigs.setPluginConfig(
             BookmarkPlugin.factory.name,
             pluginConfigFactory.createBookmarkConfig(contentConfig)
@@ -361,6 +374,8 @@ open class FlickStreamingFragment : androidx.fragment.app.Fragment(), OnTrackCha
 
         removePlayerControls()
         setAdControlVisibility(false)
+
+
         player = PlayKitManager.loadPlayer(activity, pluginConfigs)
         player?.settings?.setSubtitleStyle(PlayerSettings.subTitleStyle)
         player?.settings?.setPreferredTextTrack(PlayerSettings.preferredTextTrack)
@@ -482,7 +497,7 @@ open class FlickStreamingFragment : androidx.fragment.app.Fragment(), OnTrackCha
     private fun observePlaybackContextViewModel() {
         flickStreamingViewModel?.playbackContext?.removeObservers(this)
         /** The playback context live data is designed to talk to its repository the moment you touch it for the first time **/
-        flickStreamingViewModel?.playbackContext?.observe(this, this)
+        flickStreamingViewModel?.playbackContext?.observe(viewLifecycleOwner, this)
     }
 
     private fun preparePlayerAndPlay(
@@ -494,7 +509,23 @@ open class FlickStreamingFragment : androidx.fragment.app.Fragment(), OnTrackCha
         playbackContext?.ttl?.let {
             playbackContextExpiryTime = System.currentTimeMillis() + it
         }
-        createPlayer(adsVmap)
+
+        if (player == null) {
+            createPlayer(adsVmap)
+        } else {
+            //updeate the plugins
+            player?.updatePluginConfig(
+                KavaAnalyticsPlugin.factory.name,
+                pluginConfigFactory.createKavaAnalyticsPluginkConfig(contentConfig)
+            )
+            if (flickPlayerConfig?.adsEnabled == true) {
+                player?.updatePluginConfig(
+                    IMAPlugin.factory.name,
+                    pluginConfigFactory.createImaConfig(adsVmap)
+                )
+            }
+
+        }
         player?.prepare(PlayerSettings.createMediaConfig(mediaEntry, startPosition))
         player?.play()
 

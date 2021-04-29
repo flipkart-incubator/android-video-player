@@ -20,8 +20,24 @@ import com.flipkart.flick.helper.plugins.BookmarkPlugin
 import com.google.gson.JsonObject
 import com.kaltura.playkit.PKPluginConfigs
 import com.kaltura.playkit.plugins.ima.IMAConfig
+import com.kaltura.playkit.plugins.kava.KavaAnalyticsConfig
+import com.kaltura.playkit.plugins.kava.KavaAnalyticsPlugin
+import com.kaltura.playkit.utils.Consts.DISTANCE_FROM_LIVE_THRESHOLD
+
 
 class PluginConfigFactory {
+
+    fun createKavaAnalyticsPluginkConfig(contentData: ContentData?): KavaAnalyticsConfig {
+        val kavaAnalyticsConfig = KavaAnalyticsConfig()
+            .setPartnerId(8787401) // The OVP Partner ID take it from your BE or DMS
+            .setReferrer("https://fk.com")
+            .setUserId("AppUserId")
+            .setApplicationVersion("1.3")
+            .setEntryId("5_f93tepsn") // the OVP Entry ID if you use providsers not needed
+            .setDvrThreshold(DISTANCE_FROM_LIVE_THRESHOLD)
+
+        return kavaAnalyticsConfig
+    }
 
     fun createBookmarkConfig(contentData: ContentData?): PKPluginConfigs {
         val configs = PKPluginConfigs()
